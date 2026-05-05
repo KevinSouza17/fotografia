@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rafael Lima Fotografia — Casamentos, Eventos & Ensaios</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Rafael Lima</a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#pacotes">Pacotes</a></li>
+    <li><a href="#depoimentos">Histórias</a></li>
+    <li><a href="#galeria">Área do Cliente</a></li>
+  </ul>
+  <a href="#agendar" class="nav-cta">Agendar Sessão</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Fotografia de Casamentos & Eventos</p>
+    <h1 class="hero-title">Momentos que<br><em>duram para sempre</em></h1>
+    <p class="hero-subtitle">Cada história de amor merece ser contada com beleza, emoção e autenticidade.</p>
+    <div class="hero-actions">
+      <a href="#portfolio" class="btn-primary">Ver Portfólio</a>
+      <a href="#pacotes" class="btn-outline">Conhecer Pacotes</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Role</span>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="sobre-image">
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="Rafael Lima — Fotógrafo">
+  </div>
+  <div class="sobre-text">
+    <p class="section-label">Sobre mim</p>
+    <h2 class="section-title">Olá, sou <em>Rafael Lima</em></h2>
+    <p>Fotógrafo profissional com mais de 8 anos dedicados a capturar os momentos mais especiais da vida das pessoas. Especializado em casamentos, eventos sociais e ensaios fotográficos, trago para cada trabalho uma visão artística única aliada a técnica refinada.</p>
+    <p>Acredito que cada casal tem uma história singular, e meu trabalho é contar essa história através de imagens que transmitam emoção, beleza e verdade. Mais do que fotografar, meu compromisso é criar memórias que vão emocionar gerações.</p>
+    <div class="sobre-stats">
+      <div>
+        <div class="stat-num">8+</div>
+        <div class="stat-label">Anos de Experiência</div>
+      </div>
+      <div>
+        <div class="stat-num">350+</div>
+        <div class="stat-label">Casamentos Realizados</div>
+      </div>
+      <div>
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Clientes Satisfeitos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="portfolio-header">
+    <div>
+      <p class="section-label">Meu Trabalho</p>
+      <h2 class="section-title">Portfólio</h2>
+    </div>
+    <div class="portfolio-filters">
+      <button class="filter-btn active" onclick="filterPortfolio('todos', this)">Todos</button>
+      <button class="filter-btn" onclick="filterPortfolio('casamentos', this)">Casamentos</button>
+      <button class="filter-btn" onclick="filterPortfolio('eventos', this)">Eventos</button>
+      <button class="filter-btn" onclick="filterPortfolio('ensaios', this)">Ensaios</button>
+    </div>
+  </div>
+
+  <div class="portfolio-grid" id="portfolioGrid">
+    <div class="portfolio-item" data-cat="casamentos" onclick="openModal(this)">
+      <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=900&q=80" alt="Casamento Ana & Pedro">
+      <div class="portfolio-overlay">
+        <div class="portfolio-overlay-text">
+          <div class="portfolio-overlay-cat">Casamentos</div>
+          <div class="portfolio-overlay-title">Ana & Pedro</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="ensaios" onclick="openModal(this)">
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80" alt="Ensaio Noivado">
+      <div class="portfolio-overlay">
+        <div class="portfolio-overlay-text">
+          <div class="portfolio-overlay-cat">Ensaios</div>
+          <div class="portfolio-overlay-title">Ensaio de Noivado</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="casamentos" onclick="openModal(this)">
+      <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=700&q=80" alt="Casamento Clássico">
+      <div class="portfolio-overlay">
+        <div class="portfolio-overlay-text">
+          <div class="portfolio-overlay-cat">Casamentos</div>
+          <div class="portfolio-overlay-title">Julia & Marcos</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="eventos" onclick="openModal(this)">
+      <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Evento Corporativo">
+      <div class="portfolio-overlay">
+        <div class="portfolio-overlay-text">
+          <div class="portfolio-overlay-cat">Eventos</div>
+          <div class="portfolio-overlay-title">Gala Corporativa</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="ensaios" onclick="openModal(this)">
+      <img src="https://images.unsplash.com/photo-1529636444744-adffc9135a5e?w=600&q=80" alt="Ensaio Família">
+      <div class="portfolio-overlay">
+        <div class="portfolio-overlay-text">
+          <div class="portfolio-overlay-cat">Ensaios</div>
+          <div class="portfolio-overlay-title">Família Rodrigues</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="casamentos" onclick="openModal(this)">
+      <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80" alt="Cerimônia">
+      <div class="portfolio-overlay">
+        <div class="portfolio-overlay-text">
+          <div class="portfolio-overlay-cat">Casamentos</div>
+          <div class="portfolio-overlay-title">Cerimônia ao Ar Livre</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-cta">
+    <a href="#agendar" class="btn-dark">Agendar uma Sessão</a>
+  </div>
+</section>
+
+<!-- PACOTES -->
+<section id="pacotes">
+  <div class="pacotes-intro">
+    <div>
+      <p class="section-label">Investimento</p>
+      <h2 class="section-title">Pacotes de <em>Serviços</em></h2>
+    </div>
+    <p>Cada pacote foi cuidadosamente elaborado para oferecer a melhor experiência fotográfica. Todos incluem edição profissional e entrega digital em alta resolução.</p>
+  </div>
+
+  <div class="pacotes-grid">
+    <!-- Essencial -->
+    <div class="pacote-card">
+      <div class="pacote-nome">Essencial</div>
+      <div class="pacote-desc">Ideal para ensaios e eventos menores</div>
+      <div class="pacote-preco">
+        <span class="desde">A partir de</span>
+        <span class="valor">R$1.800</span>
+      </div>
+      <ul class="pacote-items">
+        <li>Até 4 horas de cobertura</li>
+        <li>150 fotos editadas</li>
+        <li>Galeria online privada</li>
+        <li>Entrega em 15 dias</li>
+        <li>1 locação</li>
+      </ul>
+      <button class="btn-pacote" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">Solicitar Orçamento</button>
+    </div>
+
+    <!-- Premium (destaque) -->
+    <div class="pacote-card destaque">
+      <span class="pacote-destaque-label">Mais Escolhido</span>
+      <div class="pacote-nome">Premium</div>
+      <div class="pacote-desc">Perfeito para casamentos e eventos completos</div>
+      <div class="pacote-preco">
+        <span class="desde">A partir de</span>
+        <span class="valor">R$4.500</span>
+      </div>
+      <ul class="pacote-items">
+        <li>Cobertura dia inteiro</li>
+        <li>400+ fotos editadas</li>
+        <li>Álbum impresso 30x30</li>
+        <li>Galeria online privada</li>
+        <li>Entrega em 30 dias</li>
+        <li>2 locações</li>
+        <li>Ensaio pré-evento incluso</li>
+      </ul>
+      <button class="btn-pacote" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">Solicitar Orçamento</button>
+    </div>
+
+    <!-- Luxo -->
+    <div class="pacote-card">
+      <div class="pacote-nome">Luxo</div>
+      <div class="pacote-desc">Experiência completa e exclusiva</div>
+      <div class="pacote-preco">
+        <span class="desde">A partir de</span>
+        <span class="valor">R$8.000</span>
+      </div>
+      <ul class="pacote-items">
+        <li>2 dias de cobertura</li>
+        <li>600+ fotos editadas</li>
+        <li>Álbum de luxo 40x40</li>
+        <li>Vídeo highlights 3min</li>
+        <li>Galeria online privada</li>
+        <li>Entrega em 45 dias</li>
+        <li>Ensaio pré-evento</li>
+        <li>Segundo fotógrafo incluso</li>
+      </ul>
+      <button class="btn-pacote" onclick="document.getElementById('agendar').scrollIntoView({behavior:'smooth'})">Solicitar Orçamento</button>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDAMENTO -->
+<section id="agendar">
+  <div class="agendar-info">
+    <p class="section-label">Vamos conversar</p>
+    <h2 class="section-title">Agende sua <em>Sessão</em></h2>
+    <p>Entre em contato para conversarmos sobre seu evento especial. Cada projeto começa com uma conversa onde entendemos seus sonhos e planejamos juntos como torná-los realidade.</p>
+    <ul class="contato-lista">
+      <li>
+        <div class="contato-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg>
+        </div>
+        (11) 99999-0000
+      </li>
+      <li>
+        <div class="contato-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        contato@rafaellimafoto.com.br
+      </li>
+      <li>
+        <div class="contato-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        Resposta em até 24 horas
+      </li>
+    </ul>
+  </div>
+
+  <div class="form-container">
+    <div id="formContainer">
+      <h3 class="form-title">Solicite seu Orçamento</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Seu Nome</label>
+          <input type="text" placeholder="Maria Silva" id="f-nome">
+        </div>
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" placeholder="seu@email.com" id="f-email">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Telefone / WhatsApp</label>
+          <input type="tel" placeholder="(11) 99999-0000" id="f-tel">
+        </div>
+        <div class="form-group">
+          <label>Data do Evento</label>
+          <input type="date" id="f-data">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Tipo de Serviço</label>
+        <select id="f-tipo">
+          <option value="">Selecione...</option>
+          <option>Casamento</option>
+          <option>Evento Corporativo</option>
+          <option>Ensaio Fotográfico</option>
+          <option>Festa / Confraternização</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Pacote de Interesse</label>
+        <select id="f-pacote">
+          <option value="">Selecione...</option>
+          <option>Essencial (a partir de R$1.800)</option>
+          <option>Premium (a partir de R$4.500)</option>
+          <option>Luxo (a partir de R$8.000)</option>
+          <option>Não sei ainda, preciso de orientação</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mensagem</label>
+        <textarea placeholder="Conte um pouco sobre seu evento..." id="f-msg"></textarea>
+      </div>
+      <button class="btn-submit" onclick="enviarForm()">Enviar Solicitação</button>
+    </div>
+    <div class="success-msg" id="successMsg">
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>Solicitação Enviada!</h3>
+      <p>Obrigado pelo contato. Rafael entrará em touch em até 24 horas para conversar sobre seu projeto especial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <p class="section-label">Histórias & Memórias</p>
+  <h2 class="section-title">O que nossos <em>clientes</em> dizem</h2>
+
+  <div class="depo-grid">
+    <div class="depo-card">
+      <span class="depo-quote">"</span>
+      <div class="depo-estrelas">★★★★★</div>
+      <p class="depo-text">Rafael capturou cada detalhe do nosso casamento de uma forma que nos emocionou profundamente. As fotos transmitem exatamente o que sentimos naquele dia mágico. Recomendamos de olhos fechados!</p>
+      <div class="depo-autor">
+        <div class="depo-avatar">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Ana Lima">
+        </div>
+        <div>
+          <div class="depo-nome">Ana & Pedro Mendes</div>
+          <div class="depo-evento">Casamento — março 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depo-card">
+      <span class="depo-quote">"</span>
+      <div class="depo-estrelas">★★★★★</div>
+      <p class="depo-text">Profissional incrível! Contratamos o Rafael para nosso evento corporativo e a qualidade das fotos superou todas as expectativas. Pontual, discreto e extremamente talentoso.</p>
+      <div class="depo-autor">
+        <div class="depo-avatar">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" alt="Carlos Santos">
+        </div>
+        <div>
+          <div class="depo-nome">Carlos Santos</div>
+          <div class="depo-evento">Evento Corporativo — jan 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depo-card">
+      <span class="depo-quote">"</span>
+      <div class="depo-estrelas">★★★★★</div>
+      <p class="depo-text">O ensaio de noivado com o Rafael foi uma experiência transformadora. Ele nos deixou completamente à vontade e as fotos ficaram lindíssimas. Já contratamos para o casamento!</p>
+      <div class="depo-autor">
+        <div class="depo-avatar">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Camila Costa">
+        </div>
+        <div>
+          <div class="depo-nome">Camila & Felipe Costa</div>
+          <div class="depo-evento">Ensaio de Noivado — fev 2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA PROTEGIDA -->
+<section id="galeria">
+  <p class="section-label">Área Exclusiva</p>
+  <h2 class="section-title">Galeria do <em>Cliente</em></h2>
+  <p class="galeria-desc">Recebeu sua senha por e-mail? Acesse aqui sua galeria privada para visualizar e baixar suas fotos em alta resolução.</p>
+
+  <div class="galeria-form">
+    <input type="password" placeholder="Digite sua senha..." id="galeriaPass" maxlength="20">
+    <button onclick="acessarGaleria()">Acessar</button>
+  </div>
+  <p class="galeria-error" id="galeriaError">Senha incorreta. Verifique seu e-mail ou entre em contato.</p>
+
+  <div class="galeria-grid" id="galeriaGrid">
+    <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=400&q=80" alt="" onclick="openModal(this)">
+    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80" alt="" onclick="openModal(this)">
+    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&q=80" alt="" onclick="openModal(this)">
+    <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&q=80" alt="" onclick="openModal(this)">
+    <img src="https://images.unsplash.com/photo-1529636444744-adffc9135a5e?w=400&q=80" alt="" onclick="openModal(this)">
+    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80" alt="" onclick="openModal(this)">
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="" onclick="openModal(this)">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&q=80" alt="" onclick="openModal(this)">
+  </div>
+</section>
+
+<!-- SOCIAL STRIP -->
+<div class="social-strip">
+  <span class="social-strip-label">Siga nas redes</span>
+  <div class="social-links">
+    <a href="#">
+      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      @rafaellimafoto
+    </a>
+    <a href="#">
+      <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      Rafael Lima Fotografia
+    </a>
+    <a href="#">
+      <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.96C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+      Rafael Lima Fotografia
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <span class="footer-logo">Rafael Lima</span>
+    <p class="footer-desc">Fotógrafo profissional especializado em casamentos, eventos sociais e ensaios fotográficos. Cada imagem conta uma história única.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navegação</h4>
+    <ul>
+      <li><a href="#sobre">Sobre mim</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#pacotes">Pacotes</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#galeria">Área do Cliente</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Serviços</h4>
+    <ul>
+      <li><a href="#pacotes">Casamentos</a></li>
+      <li><a href="#pacotes">Eventos Corporativos</a></li>
+      <li><a href="#pacotes">Ensaios Fotográficos</a></li>
+      <li><a href="#pacotes">Famílias</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Contato</h4>
+    <ul>
+      <li><a href="tel:+5511999990000">(11) 99999-0000</a></li>
+      <li><a href="mailto:contato@rafaellimafoto.com.br">contato@rafaellimafoto.com.br</a></li>
+      <li><a href="#">São Paulo, SP</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <span>© 2024 Rafael Lima Fotografia — Todos os direitos reservados</span>
+  <span>Feito com ♥ para momentos que duram para sempre</span>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <div class="modal-inner" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕ Fechar</button>
+    <img id="modalImg" src="" alt="">
+  </div>
+</div>
+
+</body>
+</html>
